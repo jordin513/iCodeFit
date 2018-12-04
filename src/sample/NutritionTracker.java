@@ -114,6 +114,12 @@ public class NutritionTracker extends User implements Initializable {
         }
 
     }
+    
+    // used for running totals in Bar Graph
+    static int CARB = 0;
+    static int PROTEIN = 0;
+    static int FATS = 0;
+
 
 
     /***************************************************************
