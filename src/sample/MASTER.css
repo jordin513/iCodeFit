@@ -2,10 +2,38 @@
 
 /* Universal Styling (applies to all elements of a given type across all screens, unless specified by a #tag call */
 
-.tab {
-    -fx-pref-width: 191;
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
 }
 
+.tab-pane
+{
+    -fx-tab-min-width:182px;
+}
+
+.tab-pane .tab
+{
+    -fx-background-color: #e6e6e6;
+
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: #3c3c3c;
+}
+
+.tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #828282;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #96b946;
+}
 .tab-header-background {
     -fx-background-color: transparent;
 }
