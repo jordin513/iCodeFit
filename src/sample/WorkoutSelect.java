@@ -48,7 +48,7 @@ public class WorkoutSelect implements Initializable {
     private Button StartButton;
 
     @FXML
-    private Label WorkoutLabel;
+    private TextArea workoutText;
 
 
     static ArrayList<String> WorkoutArray = new ArrayList<String>();
@@ -70,14 +70,14 @@ public class WorkoutSelect implements Initializable {
         if (CurrentText.equals("Start") == false) {
             // all workouts performed by the user in the current run will be stored and sent elsewhere
             WorkoutArrayToUserData.addAll(WorkoutArray);
-            WorkoutLabel.setText("Workout Complete\n\n");
+            WorkoutText.setText("Workout Complete\n\n");
             for (String exercise : WorkoutArray) {
-                WorkoutLabel.setText(WorkoutLabel.getText() + " " + exercise + "\n");
+                WorkoutText.setText(WorkoutText.getText() + " " + exercise + "\n");
 
             }
             StartButton.setText("Start");
         } else {
-            WorkoutLabel.setText("Workout in progress");
+            WorkoutText.setText("Workout in progress");
             StartButton.setText("Stop");
         }
 
