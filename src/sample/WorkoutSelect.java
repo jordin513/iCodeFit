@@ -54,6 +54,8 @@ public class WorkoutSelect implements Initializable {
     @FXML
     private TextArea workoutText;
 
+    static public String returnvalue;
+
 
     static ArrayList<String> WorkoutArray = new ArrayList<String>();
     ArrayList<String> WorkoutArrayToUserData = new ArrayList<String>();
@@ -65,6 +67,7 @@ public class WorkoutSelect implements Initializable {
         //adds selected workouts to Arraylist
     void ExerciseAdd(ActionEvent event) {
             WorkoutArray.add(choice);
+            returnvalue = choice;
             if (WorkoutArray.get(counter)==null){
             }else {
                 workoutText.appendText(WorkoutArray.get(counter) + "\n");
