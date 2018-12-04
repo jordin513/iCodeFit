@@ -1,6 +1,7 @@
 package sample;
 
 import static sample.WorkoutSelect.WorkoutArray;
+import static sample.Login.user;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -112,8 +113,15 @@ public class NutritionStats extends User implements Initializable {
         generalLabelSettings();
         populateLineGraph();
         populateBarGraph();
-
+        try{
         lastWorkoutVal.setText( WorkoutArray.get(0));
+        }
+        catch(Exception ex){
+
+        }
+
+        currWeightGoalVal.setText(user.currentWeight);
+        currWeightVal.setText(user.targetWeight);
 
     }
 
