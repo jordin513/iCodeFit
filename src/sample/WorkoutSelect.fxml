@@ -2,52 +2,44 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="leadWorkoutPane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="sample.WorkoutSelect">
+<AnchorPane fx:id="leadWorkoutPane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.WorkoutSelect">
     <children>
-        <SplitPane fx:id="workoutScreen" dividerPositions="0.3" maxHeight="-Infinity" maxWidth="-Infinity"
-                   minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="574.0">
+        <SplitPane fx:id="workoutScreen" dividerPositions="0.3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="574.0">
             <items>
                 <AnchorPane fx:id="workoutTypePane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                     <children>
-                        <ListView fx:id="workoutTypeListview" prefHeight="438.0" prefWidth="169.0"
-                                  styleClass="background" stylesheets="@MASTER.css"/>
+                        <ListView fx:id="workoutTypeListview" prefHeight="438.0" prefWidth="169.0" styleClass="background" stylesheets="@MASTER.css" />
                     </children>
                 </AnchorPane>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="background"
-                            stylesheets="@MASTER.css">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="background" stylesheets="@MASTER.css">
                     <children>
-                        <ListView fx:id="workoutSpecListview" prefHeight="396.0" prefWidth="397.0"
-                                  styleClass="background" stylesheets="@MASTER.css"/>
+                        <ListView fx:id="workoutSpecListview" prefHeight="396.0" prefWidth="397.0" styleClass="background" stylesheets="@MASTER.css" />
                         <ButtonBar layoutX="189.0" layoutY="339.0" prefHeight="40.0" prefWidth="200.0">
                             <buttons>
                                 <Button fx:id="AddButton" mnemonicParsing="false" onAction="#ExerciseAdd" text="Add">
                                     <effect>
-                                        <DropShadow color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.21"/>
+                                        <DropShadow color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.21" />
                                     </effect>
                                 </Button>
-                                <Button fx:id="StartButton" mnemonicParsing="false" onAction="#StartWorkout"
-                                        text="Start">
+                                <Button fx:id="StartButton" mnemonicParsing="false" onAction="#StartWorkout" text="Start">
                                     <effect>
-                                        <DropShadow color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.21"/>
+                                        <DropShadow color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.21" />
                                     </effect>
                                 </Button>
                             </buttons>
                         </ButtonBar>
-                        <Label id="workoutLabel" fx:id="WorkoutLabel" layoutX="220.0" layoutY="-2.0" prefHeight="341.0"
-                               prefWidth="179.0" stylesheets="@MASTER.css"/>
-                        <Button fx:id="returnToFithub" layoutX="149.0" layoutY="399.0" mnemonicParsing="false"
-                                onAction="#handleWorkButtonAction" text="return to Fithub">
+                        <Button fx:id="returnToFithub" layoutX="149.0" layoutY="399.0" mnemonicParsing="false" onAction="#handleWorkButtonAction" text="return to Fithub">
                             <effect>
-                                <DropShadow color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.21"/>
+                                <DropShadow color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.21" />
                             </effect>
                         </Button>
+                  <TextArea id="workoutLabel" fx:id="workoutText" layoutX="229.0" layoutY="-1.0" prefHeight="340.0" prefWidth="169.0" stylesheets="@MASTER.css"  />
                     </children>
                 </AnchorPane>
             </items>
