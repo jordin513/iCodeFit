@@ -55,13 +55,19 @@ public class WorkoutSelect implements Initializable {
     static ArrayList<String> WorkoutArray = new ArrayList<String>();
     ArrayList<String> WorkoutArrayToUserData = new ArrayList<String>();
     String choice;
+    int counter = 0;
 
 
     @FXML
         //adds selected workouts to Arraylist
     void ExerciseAdd(ActionEvent event) {
-
             WorkoutArray.add(choice);
+            if (WorkoutArray.get(counter)==null){
+            }else {
+                workoutText.appendText(WorkoutArray.get(counter) + "\n");
+            }
+            counter++;
+
     }
 
     @FXML
@@ -70,15 +76,24 @@ public class WorkoutSelect implements Initializable {
         String CurrentText = StartButton.getText();
         if (CurrentText.equals("Start") == false) {
             // all workouts performed by the user in the current run will be stored and sent elsewhere
-            WorkoutArrayToUserData.addAll(WorkoutArray);
             workoutText.setText("Workout Complete\n\n");
             for (String exercise : WorkoutArray) {
-                workoutText.setText(workoutText.getText() + " " + exercise + "\n");
+                    if (exercise == null){
 
+                    }else{
+                    workoutText.setText(workoutText.getText() + " " + exercise + "\n");
+                    }
             }
             StartButton.setText("Start");
         } else {
-            workoutText.setText("Workout in progress");
+            workoutText.setText("Workout in progress\n\n");
+            for (String exercise : WorkoutArray) {
+                if (exercise == null){
+
+                }else{
+                    workoutText.setText(workoutText.getText() + " " + exercise + "\n");
+                }
+            }
             StartButton.setText("Stop");
         }
 
@@ -89,6 +104,8 @@ public class WorkoutSelect implements Initializable {
 
         if (event.getSource() == returnToFithub) {
 
+            workoutText.clear();
+            WorkoutArray.clear();
             leadWorkoutPane.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("MainMenu.fxml")));
 
         }
