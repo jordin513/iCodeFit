@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<TabPane fx:id="mainMenuTabs" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" side="BOTTOM" styleClass="background" stylesheets="@MASTER.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainMenu">
+    <tabs>
+        <Tab fx:id="fithubTab" text="Fit Hub">
+            <content>
+                <AnchorPane fx:id="fithubAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background" stylesheets="@MASTER.css">
+                    <padding>
+                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                    </padding>
+                    <children>
+                        <GridPane layoutX="14.0" layoutY="14.0" prefHeight="440.0" prefWidth="574.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Pane fx:id="selectWorkoutPane" prefHeight="200.0" prefWidth="200.0" styleClass="background" stylesheets="@MASTER.css">
+                                    <children>
+                                        <Label id="labelHeader" fx:id="ExeLabel1" layoutX="26.0" layoutY="34.0" text="Select Workouts" />
+                                        <Button fx:id="selectWorkoutButton" layoutX="38.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleFitHubButtonAction" text="Start Workouts">
+                                            <effect>
+                                                <DropShadow color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.21" />
+                                            </effect>
+                                        </Button>
+                                        <Label id="description" alignment="TOP_CENTER" layoutX="13.0" layoutY="127.0" prefHeight="72.0" prefWidth="182.0" text="Choose workouts based on your training style" textAlignment="CENTER" wrapText="true" />
+                                        <Label id="description" alignment="CENTER" layoutX="15.0" layoutY="242.0" prefHeight="44.0" prefWidth="171.0" text="You'll be able to see your results in the feed" textAlignment="CENTER" wrapText="true" />
+                                    </children>
+                                    <effect>
+                                        <InnerShadow height="150.0" radius="74.5" width="150.0" />
+                                    </effect>
+                                </Pane>
+                                <Pane fx:id="nutritionStatsPane" prefHeight="200.0" prefWidth="200.0" styleClass="background" stylesheets="@MASTER.css" GridPane.columnIndex="1">
+                                    <children>
+                                        <Label id="labelHeader" fx:id="ExeLabel4" layoutX="33.0" layoutY="35.0" text="Nutrition Stats" />
+                                        <Button fx:id="nutritionStatsButton" layoutX="34.0" layoutY="356.0" mnemonicParsing="false" onAction="#handleFitHubButtonAction" text="Check your Stats">
+                                            <effect>
+                                                <DropShadow color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.21" />
+                                            </effect>
+                                        </Button>
+                                        <Label id="description" alignment="TOP_CENTER" layoutX="9.0" layoutY="128.0" prefHeight="59.0" prefWidth="171.0" text="View your progress and statistics" textAlignment="CENTER" wrapText="true" />
+                                    </children>
+                                    <effect>
+                                        <InnerShadow height="150.0" radius="74.5" width="150.0" />
+                                    </effect>
+                                </Pane>
+                                <Pane fx:id="nutritionTrackerPane" prefHeight="200.0" prefWidth="200.0" style="-fx-border-radius: 10;" styleClass="background" stylesheets="@MASTER.css" GridPane.columnIndex="2">
+                                    <children>
+                                        <Label id="labelHeader" fx:id="ExeLabel5" layoutX="28.0" layoutY="36.0" text="Nutrition Tracker" />
+                                        <Button fx:id="nutritionTrackerButton" layoutX="19.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleFitHubButtonAction" text="Track your Nutrition">
+                                            <effect>
+                                                <DropShadow color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.21" />
+                                            </effect>
+                                        </Button>
+                                        <Label id="description" alignment="TOP_CENTER" layoutX="13.0" layoutY="128.0" prefHeight="68.0" prefWidth="178.0" text="Keep track of your meals and nutritional content" textAlignment="CENTER" wrapText="true" />
+                                    </children>
+                                    <effect>
+                                        <InnerShadow height="150.0" radius="74.5" width="150.0" />
+                                    </effect>
+                                </Pane>
+                            </children>
+                        </GridPane>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab fx:id="feedTab" text="Feed">
+            <content>
+                <AnchorPane fx:id="feedAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <padding>
+                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                    </padding>
+                    <children>
+                        <GridPane layoutX="14.0" layoutY="14.0" prefHeight="352.0" prefWidth="577.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Pane fx:id="feedMSG1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #253651#253651;" styleClass="pane">
+                                    <children>
+                                        <Label fx:id="usernameFeedDisplay" layoutX="63.0" layoutY="15.0" prefHeight="17.0" prefWidth="53.0" text="Ranchboi" />
+                                        <Label fx:id="workoutPresetMSG" layoutX="216.0" layoutY="15.0" text="completed the workout set: " />
+                                        <ImageView fx:id="pfpFeedDisplay" fitHeight="120.0" fitWidth="120.0" layoutX="56.0" layoutY="40.0" pickOnBounds="true">
+                                            <image>
+                                                <Image url="@baseUsers.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label layoutX="219.0" layoutY="57.0" text="V-Bar Push-downs" />
+                                        <Label layoutX="219.0" layoutY="100.0" text="Seated Incline Bicep Curls" />
+                                    </children>
+                                </Pane>
+                                <Pane fx:id="feedMSG4" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #253651#253651;" styleClass="pane" GridPane.rowIndex="1">
+                                    <children>
+                                        <Label fx:id="usernameFeedDisplay1" layoutX="70.0" layoutY="17.0" prefHeight="17.0" prefWidth="53.0" text="Ranchboi" />
+                                        <ImageView fx:id="pfpFeedDisplay1" fitHeight="120.0" fitWidth="120.0" layoutX="56.0" layoutY="42.0" pickOnBounds="true">
+                                            <image>
+                                                <Image url="@baseUsers.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label fx:id="nutritionlogPresetMSG" layoutX="227.0" layoutY="26.0" text="entered the following nutrition log: " />
+                                        <Label fx:id="mealDescriptionMSG" layoutX="227.0" layoutY="56.0" prefHeight="17.0" prefWidth="278.0" text="&quot;Nutritious breakfast of eggs, ham,and orange juice&quot;" />
+                                        <Label fx:id="carbsMSG" layoutX="227.0" layoutY="80.0" text="Carbs: 40 grams" />
+                                        <Label fx:id="proteinMSG" layoutX="227.0" layoutY="102.0" text="Fats: 8 grams" />
+                                        <Label fx:id="fatsMSG" layoutX="227.0" layoutY="128.0" text="Protein: 15 grams" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </GridPane>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab fx:id="settingsTab" text="Settings">
+            <content>
+                <AnchorPane fx:id="settingsAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <padding>
+                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                    </padding>
+                    <children>
+                        <Accordion fx:id="generalSettings" layoutX="13.0" layoutY="123.0" prefHeight="310.0" prefWidth="574.0">
+                            <panes>
+                                <TitledPane fx:id="workoutSettings" animated="false" prefHeight="298.0" prefWidth="574.0" text="Workout">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background" stylesheets="@MASTER.css">
+                                            <children>
+                                                <CheckBox layoutX="43.0" layoutY="32.0" mnemonicParsing="false" styleClass="label" text="Show Caloric Progression (calories used per exercise)" />
+                                                <CheckBox layoutX="43.0" layoutY="100.0" mnemonicParsing="false" styleClass="label" text="Set Reminders to Complete your Daily Workouts" />
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane fx:id="nutritionSettings" animated="false" prefHeight="204.0" prefWidth="574.0" text="Diet and Nutrition">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background">
+                                            <children>
+                                                <CheckBox layoutX="14.0" layoutY="26.0" mnemonicParsing="false" styleClass="label" text="Use Calorie Tracker Tool " />
+                                                <CheckBox layoutX="14.0" layoutY="64.0" mnemonicParsing="false" styleClass="label" text="Calculate Macronutrients for each meal (Beta)" />
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane fx:id="profileSettings" animated="false" prefHeight="267.0" prefWidth="574.0" text="Profile">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background">
+                                            <children>
+                                                <CheckBox layoutX="23.0" layoutY="174.0" mnemonicParsing="false" styleClass="label" text="Delete Account" />
+                                                <CheckBox layoutX="23.0" layoutY="54.0" mnemonicParsing="false" styleClass="label" text="Change Training Style " />
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                            </panes>
+                        </Accordion>
+                        <Button fx:id="changeUserProfileButton" layoutX="426.0" layoutY="31.0" mnemonicParsing="false" onAction="#handleFitHubButtonAction" prefHeight="29.0" prefWidth="160.0" text="Change Profile Settings ">
+                            <effect>
+                                <DropShadow color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.21" />
+                            </effect>
+                        </Button>
+                        <ImageView fx:id="userPFP" fitHeight="100.0" fitWidth="150.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true">
+                            <image>
+                                <Image url="@Avatar2.jpg" />
+                            </image>
+                        </ImageView>
+                        <Label id="description" fx:id="nameDisplay" layoutX="199.0" layoutY="23.0" prefHeight="17.0" prefWidth="97.0" stylesheets="@MASTER.css" text="name" />
+                        <Label id="description" fx:id="usernameDisplay" layoutX="199.0" layoutY="47.0" prefHeight="17.0" prefWidth="180.0" stylesheets="@MASTER.css" text="username" />
+                        <Button fx:id="signoutButton" layoutX="427.0" layoutY="74.0" mnemonicParsing="false" onAction="#handleFitHubButtonAction" prefHeight="29.0" prefWidth="160.0" text="Sign Out">
+                            <effect>
+                                <DropShadow color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.21" />
+                            </effect>
+                        </Button>
+                        <Label id="description" fx:id="SexAgeLabel" layoutX="199.0" layoutY="78.0" stylesheets="@MASTER.css" text="Age Sex" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+    <effect>
+        <InnerShadow color="#00000080" height="100.0" radius="49.5" width="100.0" />
+    </effect>
+</TabPane>

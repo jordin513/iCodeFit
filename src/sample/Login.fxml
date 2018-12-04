@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" styleClass="background" stylesheets="@MASTER.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Login">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <PasswordField fx:id="mainPasswordInfo" layoutX="135.0" layoutY="279.0" prefHeight="37.0" prefWidth="307.0" promptText="Enter password:" styleClass="textField" stylesheets="@MASTER.css">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <effect>
+                <DropShadow color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.21" />
+            </effect>
+        </PasswordField>
+        <Button fx:id="signupButton" layoutX="245.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleSignup" prefHeight="30.0" prefWidth="195.0" stylesheets="@MASTER.css" text="Not a member? Sign up here!" underline="true">
+            <effect>
+                <DropShadow color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.21" />
+            </effect>
+        </Button>
+        <Label id="labelTextField" fx:id="mainPasswordLabel" layoutX="138.0" layoutY="249.0" text="Password" />
+        <Label id="labelTextField" fx:id="mainUsernameLabel" layoutX="137.0" layoutY="150.0" text="Username" />
+        <TextField fx:id="mainUsernameInfo" layoutX="135.0" layoutY="180.0" prefHeight="37.0" prefWidth="307.0" promptText="Enter email address: (sample@mail.com)" stylesheets="@MASTER.css">
+            <styleClass>
+                <String fx:value="shadow" />
+                <String fx:value="textField" />
+            </styleClass>
+            <effect>
+                <DropShadow color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.21" />
+            </effect>
+        </TextField>
+        <Label id="labelTitle" fx:id="welcomeText" layoutX="181.0" layoutY="57.0" prefHeight="48.0" prefWidth="238.0" text="iCodeFit Systems" textAlignment="CENTER">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <font>
+                <Font name="Fira Sans" size="12.0" />
+            </font>
+        </Label>
+        <Label id="labelHook" fx:id="hook" layoutX="220.0" layoutY="107.0" text="The Future Is Now" />
+        <Label fx:id="existingUsernameErrorMSG" layoutX="137.0" layoutY="224.0" styleClass="labelError" stylesheets="@MASTER.css" text="*Incorrect email. Please try again" />
+        <Label fx:id="existingPasswordErrorMSG" layoutX="135.0" layoutY="327.0" styleClass="labelError" text="*Incorrect password. Please try again" />
+        <Button fx:id="loginButton" layoutX="137.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="30.0" prefWidth="102.0" stylesheets="@MASTER.css" text="Login">
+            <effect>
+                <DropShadow color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.22" />
+            </effect>
+        </Button>
+    </children>
+    <effect>
+        <InnerShadow blurType="GAUSSIAN" color="#000000d7" height="255.0" radius="127.0" width="255.0" />
+    </effect>
+</AnchorPane>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainLoginScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" styleClass="background" stylesheets="@MASTER.css"
+            xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.CreateAccount">
+    <padding>
+        <Insets bottom="200.0" left="200.0" right="200.0" top="200.0"/>
+    </padding>
+    <children>
+        <Button fx:id="createAcctButton" layoutX="135.0" layoutY="423.0" mnemonicParsing="false" prefHeight="30.0"
+                prefWidth="150.0" stylesheets="@MASTER.css" text="Create account">
+            <effect>
+                <DropShadow blurType="ONE_PASS_BOX" color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.21"/>
+            </effect>
+        </Button>
+        <Label fx:id="mainPasswordLabel" layoutX="132.0" layoutY="198.0" stylesheets="@MASTER.css" text="Password"/>
+        <Label fx:id="mainEmailLabel" layoutX="135.0" layoutY="94.0" stylesheets="@MASTER.css" text="Email"/>
+        <TextField fx:id="mainUsernameInfo" layoutX="132.0" layoutY="124.0" prefHeight="37.0" prefWidth="307.0"
+                   promptText="Enter email address: (sample@mail.com)" styleClass="textField" stylesheets="@MASTER.css">
+            <effect>
+                <DropShadow color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.21"/>
+            </effect>
+        </TextField>
+        <Label fx:id="acctText" layoutX="158.0" layoutY="37.0" prefHeight="50.0" prefWidth="262.0"
+               stylesheets="@MASTER.css" text="Create An Account" textAlignment="CENTER">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <font>
+                <Font name="Lucida Sans Demibold" size="25.0"/>
+            </font>
+        </Label>
+        <PasswordField fx:id="confirmPasswordInfo" layoutX="135.0" layoutY="325.0" prefHeight="37.0" prefWidth="307.0"
+                       promptText="Enter password:" styleClass="textField" stylesheets="@MASTER.css">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <effect>
+                <DropShadow color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.21"/>
+            </effect>
+        </PasswordField>
+        <Label fx:id="confirmPasswordLabel" layoutX="139.0" layoutY="295.0" stylesheets="@MASTER.css"
+               text="Confirm Password"/>
+        <Button fx:id="cancelToLoginMain" layoutX="300.0" layoutY="423.0" mnemonicParsing="false" prefHeight="30.0"
+                prefWidth="150.0" text="Cancel">
+            <effect>
+                <DropShadow color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.21"/>
+            </effect>
+        </Button>
+        <Label fx:id="shortPasswordErrorMSG" layoutX="132.0" layoutY="271.0" styleClass="labelError"
+               stylesheets="@MASTER.css" text="* Password must be at minimum eight (8) characters"/>
+        <Label fx:id="passwordMismatchErrorMSG" layoutX="135.0" layoutY="370.0" styleClass="labelError"
+               stylesheets="@MASTER.css" text="* Passwords do not match. Please try again"/>
+        <Label fx:id="invalidEmailErrorMSG" layoutX="132.0" layoutY="170.0" styleClass="labelError"
+               text="* Incorrect email format. Please try again"/>
+        <TextField fx:id="mainPasswordInfo" layoutX="135.0" layoutY="225.0" prefHeight="37.0" prefWidth="307.0"
+                   styleClass="textField" stylesheets="@MASTER.css">
+            <effect>
+                <DropShadow color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.21"/>
+            </effect>
+        </TextField>
+    </children>
+    <effect>
+        <InnerShadow height="255.0" radius="127.0" width="255.0"/>
+    </effect>
+</AnchorPane>
