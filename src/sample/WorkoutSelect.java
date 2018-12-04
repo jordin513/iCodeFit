@@ -43,6 +43,9 @@ public class WorkoutSelect implements Initializable {
     private Button AddButton;
 
     @FXML
+    private Button ClearButton;
+
+    @FXML
     private Button returnToFithub;
 
     @FXML
@@ -96,9 +99,14 @@ public class WorkoutSelect implements Initializable {
             }
             StartButton.setText("Stop");
         }
-
     }
 
+    @FXML
+    void ExerciseClear(ActionEvent event){
+        workoutText.clear();
+        WorkoutArray.clear();
+        counter = 0;
+    }
     @FXML
     private void handleWorkButtonAction(ActionEvent event) throws IOException {
 
