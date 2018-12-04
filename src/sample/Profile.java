@@ -36,6 +36,7 @@ public class Profile extends CreateAccount implements Initializable {
     private String age;
     private String currentweight;
     private String targetweight;
+    private String goal;
 
     //FILE LOCATION -- Used in method to print to text file
     private static final String FILENAME = "src/sample/UserInfo.txt";
@@ -88,9 +89,14 @@ public class Profile extends CreateAccount implements Initializable {
         return targetweight;
     }
 
+    public String getGoals() { return goal; }
+
+    public void setGoals(String goals) { this.goal = goals; }
+
     // Set user's sex and age on profile screen, and to display on choice box
     ObservableList sexes = FXCollections.observableArrayList();
     ObservableList ages = FXCollections.observableArrayList();
+    ObservableList goals = FXCollections.observableArrayList();
 
     // workaround for populating an integer array with known values. Easier than hard-coding an array of integers
     List<Integer> agesStream = IntStream.rangeClosed(13, 85).boxed().collect(Collectors.toList());
@@ -153,6 +159,11 @@ public class Profile extends CreateAccount implements Initializable {
     @FXML
     private RadioButton PrivacyRadio;
 
+    @FXML
+    private ChoiceBox<String> userGoals;
+
+    @FXML
+    private Label healthGoals;
 
 
     Stage stageHere;
@@ -189,6 +200,16 @@ public class Profile extends CreateAccount implements Initializable {
         ages.removeAll();
         ages.addAll(agesStream);
         userAge.getItems().addAll(ages);
+
+    }
+
+    public void loadGoals() {
+        goals.removeAll();
+        String Increase = "Gain Muscle";
+        String Decrease = "Lose Fat";
+        String Strength = "Build Strength";
+        goals.addAll(Increase, Decrease, Strength);
+        userGoals.getItems().addAll(goals);
 
     }
 
@@ -240,6 +261,8 @@ public class Profile extends CreateAccount implements Initializable {
                 setSex(userSex.getSelectionModel().getSelectedItem().toString());
                 setCurrentWeight(CurrentWeight.getText());
                 setTargetWeight(TargetWeight.getText());
+                setGoals(userGoals.getSelectionModel().getSelectedItem().toString());
+                System.out.println("handle");
 
 
                 //Testing retrieval of information.
@@ -265,7 +288,7 @@ public class Profile extends CreateAccount implements Initializable {
                 stageHere=(Stage) finalizeAcctButton.getScene().getWindow();
                 //load up Login FXML document
                 try {
-                    rootHere = FXMLLoader.load(getClass().getResource("Login.fxml"));
+                    rootHere = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -279,7 +302,7 @@ public class Profile extends CreateAccount implements Initializable {
     }
 
     //PRINT USERINFO TO TEXT FILE.............
-    public void addUserInfoText(String email, String name, String username, String password, String sex, String age,String currweight,String targweight) {
+    public void addUserInfoText(String email, String name, String username, String password, String sex, String age, String currweight, String targweight) {
         BufferedWriter bw = null;
         FileWriter fw = null;
 
@@ -314,6 +337,8 @@ public class Profile extends CreateAccount implements Initializable {
             bw.write("CW: " + currweight);
             bw.newLine();
             bw.write("TW: " + targweight);
+            bw.newLine();
+            bw.write ("HG: " + goal);
             bw.newLine();
 
 
@@ -351,8 +376,10 @@ public class Profile extends CreateAccount implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         loadSex();
         loadAge();
+        loadGoals();
         userAge.setItems(ages);
         userSex.setItems(sexes);
+        userGoals.setItems(goals);
 
         handleCancelActions();
         handleProfileActions();
