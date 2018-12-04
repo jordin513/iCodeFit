@@ -265,7 +265,7 @@ public class Profile extends CreateAccount implements Initializable {
                 stageHere=(Stage) finalizeAcctButton.getScene().getWindow();
                 //load up Login FXML document
                 try {
-                    rootHere = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+                    rootHere = FXMLLoader.load(getClass().getResource("Login.fxml"));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
