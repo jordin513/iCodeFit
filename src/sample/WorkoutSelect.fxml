@@ -20,7 +20,7 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="background" stylesheets="@MASTER.css">
                     <children>
                         <ListView fx:id="workoutSpecListview" prefHeight="340.0" prefWidth="229.0" styleClass="background" stylesheets="@MASTER.css" />
-                        <ButtonBar layoutX="189.0" layoutY="339.0" prefHeight="40.0" prefWidth="200.0">
+                        <ButtonBar layoutX="215.0" layoutY="340.0" prefHeight="40.0" prefWidth="123.0">
                             <buttons>
                                 <Button fx:id="AddButton" mnemonicParsing="false" onAction="#ExerciseAdd" text="Add" translateX="2.0">
                                     <effect>
@@ -39,7 +39,12 @@
                                 <DropShadow color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.21" />
                             </effect>
                         </Button>
-                  <TextArea id="workoutLabel" fx:id="workoutText" layoutX="229.0" layoutY="-1.0" prefHeight="340.0" prefWidth="169.0" stylesheets="@MASTER.css" />
+                  <TextArea id="workoutLabel" fx:id="workoutText" editable="false" layoutX="229.0" layoutY="-1.0" prefHeight="340.0" prefWidth="169.0" stylesheets="@MASTER.css" />
+                  <Button fx:id="ClearButton" layoutX="290.0" layoutY="384.0" mnemonicParsing="false" onAction="#ExerciseClear" text="Clear">
+                     <effect>
+                        <DropShadow color="#00000080" offsetX="5.0" offsetY="5.0" spread="0.21" />
+                     </effect>
+                  </Button>
                     </children>
                 </AnchorPane>
             </items>
