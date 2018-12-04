@@ -30,13 +30,13 @@
         </Label>
         <Label id="labelTextField" fx:id="mainNameLabel" layoutX="68.0" layoutY="84.0" stylesheets="@MASTER.css" text="Name" />
         <TextField fx:id="nameCollector" layoutX="68.0" layoutY="116.0" prefHeight="25.0" prefWidth="180.0" styleClass="textField" stylesheets="@MASTER.css" />
-        <Label id="labelTextField" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="334.0" layoutY="92.0" prefHeight="134.0" prefWidth="201.0" stylesheets="@MASTER.css" text="Would you like to share your fitness activity with other users?" textAlignment="CENTER" wrapText="true">
+        <Label id="labelTextField" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="334.0" layoutY="87.0" prefHeight="134.0" prefWidth="201.0" stylesheets="@MASTER.css" text="Would you like to share your fitness activity with other users?" textAlignment="CENTER" wrapText="true">
             <font>
                 <Font size="18.0" />
             </font>
         </Label>
-        <Label id="labelTextField" fx:id="ageLabel" layoutX="68.0" layoutY="226.0" stylesheets="@MASTER.css" text="Age" />
-        <ChoiceBox fx:id="userAge" layoutX="68.0" layoutY="259.0" prefHeight="30.0" prefWidth="53.0" />
+        <Label id="labelTextField" fx:id="ageLabel" layoutX="78.0" layoutY="226.0" stylesheets="@MASTER.css" text="Age" />
+        <ChoiceBox fx:id="userAge" layoutX="78.0" layoutY="259.0" prefHeight="30.0" prefWidth="53.0" />
         <ChoiceBox fx:id="userSex" layoutX="151.0" layoutY="259.0" prefHeight="30.0" prefWidth="53.0" />
         <TextField fx:id="usernameCollector" layoutX="68.0" layoutY="189.0" prefHeight="25.0" prefWidth="180.0" styleClass="textField" stylesheets="@MASTER.css" />
         <Label id="labelTextField" fx:id="sexLabel" layoutX="151.0" layoutY="226.0" stylesheets="@MASTER.css" text="Sex" />
@@ -50,10 +50,8 @@
         <TextField fx:id="TargetWeight" layoutX="194.0" layoutY="359.0" prefHeight="25.0" prefWidth="64.0" styleClass="textField" stylesheets="@MASTER.css" />
         <Label id="labelTextField" layoutX="62.0" layoutY="333.0" stylesheets="@MASTER.css" text="Current Weight" />
         <TextField fx:id="CurrentWeight" layoutX="68.0" layoutY="359.0" prefHeight="25.0" prefWidth="64.0" styleClass="textField" stylesheets="@MASTER.css" />
-        <RadioButton fx:id="PrivacyRadio" layoutX="412.0" layoutY="165.0" mnemonicParsing="false" styleClass="label" text="Yes" />
-      <Label layoutX="368.0" layoutY="236.0" prefHeight="30.0" prefWidth="189.0" text="Choose your training style:" />
-      <RadioButton layoutX="378.0" layoutY="274.0" mnemonicParsing="false" text="Gain" textFill="WHITE" />
-      <RadioButton layoutX="375.0" layoutY="307.0" mnemonicParsing="false" text="Maintain" textFill="WHITE" />
-      <RadioButton layoutX="377.0" layoutY="342.0" mnemonicParsing="false" text="Lose" textFill="WHITE" />
+        <RadioButton fx:id="PrivacyRadio" layoutX="396.0" layoutY="178.0" mnemonicParsing="false" styleClass="label" text="Yes" />
+      <Label id="labelTextField" fx:id="healthGoals" layoutX="408.0" layoutY="227.0" stylesheets="@MASTER.css" text="healthGoals" />
+      <ChoiceBox fx:id="userGoals" layoutX="408.0" layoutY="260.0" prefHeight="30.0" prefWidth="53.0" />
     </children>
 </AnchorPane>
