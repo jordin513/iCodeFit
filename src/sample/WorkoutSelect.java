@@ -113,7 +113,6 @@ public class WorkoutSelect implements Initializable {
         if (event.getSource() == returnToFithub) {
 
             workoutText.clear();
-            WorkoutArray.clear();
             leadWorkoutPane.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("MainMenu.fxml")));
 
         }
@@ -198,7 +197,7 @@ public class WorkoutSelect implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        WorkoutArray.clear();
         // loads the list view options on screen start-up
         loadLeftsideListview();
 
