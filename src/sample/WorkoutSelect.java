@@ -105,6 +105,7 @@ public class WorkoutSelect implements Initializable {
     }
 
     @FXML
+    //ExerciseClear Button
     void ExerciseClear(ActionEvent event){
         workoutText.clear();
         WorkoutArray.clear();
@@ -112,7 +113,7 @@ public class WorkoutSelect implements Initializable {
     }
     @FXML
     private void handleWorkButtonAction(ActionEvent event) throws IOException {
-
+        //returnToFitHub Button Clicked
         if (event.getSource() == returnToFithub) {
 
             workoutText.clear();
@@ -125,7 +126,7 @@ public class WorkoutSelect implements Initializable {
     public void SetExersizes(String workout) {
         workoutSpecs.clear();
         workoutSpecListview.getItems().clear();
-
+    
         if (workout == "Cardio") {
             workoutSpecs.addAll("Jogging", "Sprints", "Jumping Jacks", "Biking", "Swimming", "Jump Rope",
                     "Stair Climbing", "Pick-up Basketball", "Rowing", "Boxing", "Burpees");
