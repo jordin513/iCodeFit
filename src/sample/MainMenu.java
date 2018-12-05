@@ -166,20 +166,20 @@ public class MainMenu implements Initializable {
 
     @FXML
     private void handleFitHubButtonAction(ActionEvent event) throws IOException {
-
+        
         if (event.getSource() == selectWorkoutButton) {
 
             fithubAnchor.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("WorkoutSelect.fxml")));
 
         }
-
+        
         else if (event.getSource() == nutritionStatsButton) {
 
             fithubAnchor.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource(
                 "NutritionStats.fxml")));
 
         }
-
+       
         else if (event.getSource() == customWorkoutButton) {
 
             fithubAnchor.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("sample.fxml")));
@@ -241,9 +241,7 @@ public class MainMenu implements Initializable {
     /***************************************************************
      /* METHODS RELATED TO SETTINGS ITEMS
      ****************************************************************/
-    // TODO: Complete Settings Tab Items
-
-
+   
 
 
     /***************************************************************
