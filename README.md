@@ -5,8 +5,10 @@ HOW TO OPEN AND RUN OUR PROGRAM:
 
 
 FROM RUNNABLE JAR
-Download from our google drive to your desktop
-double click
+Go to our Google Drive
+Click on Final Deliverables Folder
+Right click on jar folder and Download from our google drive to your desktop
+double click on the runnable jar folder
 
 
 
