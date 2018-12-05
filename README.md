@@ -1,10 +1,15 @@
 # SoftwareFundamentalsProject
 
 HOW TO OPEN AND RUN OUR PROGRAM:
-FROM RUNNABLE JAR
 
+
+
+FROM RUNNABLE JAR
 Download from our google drive to your desktop
 double click
+
+
+
 FROM ECLIPSE:
 Create a new folder 
 Open eclipse
@@ -27,6 +32,7 @@ Refresh your src folder in eclipse
 Right click on main.java and select run as java application 
 
 TEST CASES:
+
 TEST CASE 1: 
 Create account with any valid email address and 8 character password.
 Log in with that information.
