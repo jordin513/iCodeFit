@@ -185,7 +185,6 @@ public class Profile extends CreateAccount implements Initializable {
      ****************************************************************/
 
     // loads character values into Choice Boxes
-    // TODO: Connect image choose button to image pathfinder
 
     public void loadSex() {
         sexes.removeAll();
@@ -265,12 +264,6 @@ public class Profile extends CreateAccount implements Initializable {
                 System.out.println("handle");
 
 
-                //Testing retrieval of information.
-//                System.out.println("Print Name: " + name);
-//                System.out.println("Print UserName: " + username);
-//                System.out.println("Print Age: " + age);
-//                System.out.println("Print Sex: " + sex);
-
 
                 //Retrieving Account UN & PW From previous screen
                 CreateAccount createdAcc = new CreateAccount();
@@ -280,9 +273,6 @@ public class Profile extends CreateAccount implements Initializable {
                 //Upload Information onto TextFile, using addUserInfoText Method
                 addUserInfoText(userEM,name,username,userPW,sex,age,currentweight,targetweight);
 
-
-
-                // TODO: save the user's selected image
 
 
                 stageHere=(Stage) finalizeAcctButton.getScene().getWindow();
@@ -319,7 +309,7 @@ public class Profile extends CreateAccount implements Initializable {
             // true = append file
             fw = new FileWriter(file.getAbsoluteFile(), true);
             bw = new BufferedWriter(fw);
-
+            //Write to textfile
             bw.write("------------------");
             bw.newLine();
             bw.write("EM: "+ email);
