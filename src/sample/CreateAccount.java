@@ -119,6 +119,7 @@ public class CreateAccount implements Initializable {
         return pat.matcher(email).matches();
     }
 
+    //Checking if Email is valid, Displays error message if not
     public boolean checkEmailProperty(TextField mainUsernameInfo) {
 
         boolean validEmail;
@@ -138,6 +139,7 @@ public class CreateAccount implements Initializable {
 
     }
 
+    //Check password length, displays error message
     public boolean checkPasswordLength(TextField mainPasswordInfo) {
 
         boolean validPasswordLength;
@@ -160,7 +162,8 @@ public class CreateAccount implements Initializable {
 
         return validPasswordLength;
     }
-
+    
+    //Method to check check if password from textfield = password in textfile
     public boolean checkMatchingPasswords(TextField mainPasswordInfo, PasswordField confirmPasswordInfo) {
 
         boolean samePasswords;
