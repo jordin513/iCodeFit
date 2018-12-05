@@ -24,7 +24,6 @@ import java.util.ResourceBundle;
 
 public class NutritionStats extends User implements Initializable {
 
-    testNutritionStatsDriver thisRun = new testNutritionStatsDriver();
 
     /***************************************************************
      /* NUTRITION STATISTICS DISPLAY FXML
