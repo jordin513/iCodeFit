@@ -16,7 +16,7 @@ Right click on jar folder and Download from our google drive to your desktop//
 
 double click on the runnable jar folder//
 
-
+-------------------------------------------------------------------------------------------------------------------------------
 
 FROM ECLIPSE:
 
@@ -77,7 +77,7 @@ Refresh your src folder in eclipse//
 
 Right click on main.java and select run as java application//
 
-
+--------------------------------------------------------------------------------------------------------------------------------
 
 TEST CASES:
 
@@ -100,7 +100,7 @@ Click the start button then click the stop button that appears.//
 
 Navigate to the nutrition tracker page, add example macro nutrients integer values to the text fields, go back to fit hub, view nutrition stats to make sure that they are up to date, navigate to settings then log out//
 
-
+--------------------------------------------------------------------------------------------------------------------------------
 
 TEST CASE 2:
 
@@ -123,7 +123,7 @@ Repeat this for multiple exercises. Click the start button then click the stop b
 Navigate to the nutrition tracker page, add example macro nutrients integer values to the text fields, go back to fit hub, view nutrition stats to make sure that they are up to date, navigate to settings then log out//
 
 
-
+--------------------------------------------------------------------------------------------------------------------------------
 
 TEST CASE 3:
 
