@@ -111,7 +111,7 @@ Login with these account credentials//
 jordin@gmail.com//
 
 
-Test1234//
+test1234
 
 
 Navigate to select workout screen and select any exercise you desire then select the add button.//
@@ -128,7 +128,7 @@ Navigate to the nutrition tracker page, add example macro nutrients integer valu
 TEST CASE 3:
 
 
-Login with existing account credentials email: jordin@gmail.com password: 12345678//
+Login with existing account credentials email: jordin@gmail.com password: test1234
 
 
 
@@ -136,7 +136,7 @@ Navigate to the Nutrition stats page. Current weight will be 212 and target weig
 
 
 
-Login with existing account credentials email: jordin@gmail.com password: 12345678//
+Login with existing account credentials email: juan@gmail.com password: 12345678
 
 
 
