@@ -140,7 +140,7 @@ public class Login extends CreateAccount implements Initializable {
 
                 } else {
                     existingUsernameErrorMSG.setText("* This email is not in our system. Try again or Create an Account");
-
+                    existingUsernameErrorMSG.setVisible(true);
                 }
 
             }
