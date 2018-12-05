@@ -25,7 +25,8 @@ public class Login extends CreateAccount implements Initializable {
     /***************************************************************
      /* LOGIN FXML ELEMENTS
      ****************************************************************/
-
+    
+    
     static User user = new User();
     static String password = "";
     String email = "";
@@ -88,6 +89,7 @@ public class Login extends CreateAccount implements Initializable {
         stage.show();
     }
 
+    //Handling clicking Login Button
     @FXML
     void handleLogin(ActionEvent event) throws Exception {
 
@@ -95,7 +97,8 @@ public class Login extends CreateAccount implements Initializable {
         Parent root;
         //Search user method
         searchUsers();
-
+        
+        //Check if email exists, and checks if password is correct
         if (mainPasswordInfo.getText().equals(password) && CreateAccount.isValid(mainUsernameInfo.getText())) {
             stage = (Stage) loginButton.getScene().getWindow();
             root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
@@ -115,14 +118,10 @@ public class Login extends CreateAccount implements Initializable {
             }
 
             else {}
-
-            //TODO: create validation for correct email, different password from what's on file
-
         }
-
-
     }
-
+    
+    //Search Textfile for email, then assigns all variables from textfile
     public void searchUsers() {
 
         try {
