@@ -14,8 +14,8 @@ UN: Master
 PW: 12345678
 SX: M
 AG: 25
-CW: 212
-TW: 160
+CW: 150
+TW: 200
 ------------------
 EM: jaariza@gmail.com
 NM: Juan Ariza
